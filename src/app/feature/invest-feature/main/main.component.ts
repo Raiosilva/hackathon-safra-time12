@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/service/auth.service';
@@ -11,7 +11,6 @@ import { Labels } from 'src/static/labels';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  @ViewChild('pwConfirmModel') pwConfirmModel!: NgModel;
   public loginForm: FormGroup = this.fb.group({
     agencia: ['', [Validators.required, Validators.minLength(4)]],
     conta: ['', [Validators.required, Validators.minLength(4)]],
@@ -69,8 +68,8 @@ export class MainComponent implements OnInit {
         && value.password == '123456'
       ) {
         this.router.navigateByUrl('invest-feature/invest');
-        this.authService.logar(value.userId)
-        this.loginOkNotification('u!');
+        this.authService.set("bank_account", value.conta)
+        this.loginOkNotification(value.conta);
         this.loading = false;
       } else {
         this.loginErrorNotification('Verifique a Senha, Agência, Conta podem conter error!');
@@ -81,7 +80,7 @@ export class MainComponent implements OnInit {
 
   private loginOkNotification(u: any) {
     this.snackBar.open(
-      'Logged in successfuly. Welcome ' + u.firstname + '!', 'OK',
+      'Logged in successfuly. Welcome ' + u + '!', 'OK',
       { duration: 2000 }
     );
   }

@@ -12,25 +12,12 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const value = localStorage.getItem("TOKEN_KEY")
-    console.log('value: ', localStorage.getItem("TOKEN_KEY"));
+    const token = localStorage.getItem('bank_account');
 
-    return this.check(state.url);
-  }
-
-  check(path: string) {
-    const user = localStorage.getItem("TOKEN_KEY") ? JSON.parse(localStorage.getItem("TOKEN_KEY") || "") : undefined;
-    if (path == '/invest-feature/invest') {
-      const rtn = user != undefined;
-      if (!rtn) {
-        this.router.navigate(['/invest-feature/main']);
-
-        this.rt = false;
-      } else {
-        this.rt = true;
-      }
+    if (state.url == '/invest-feature/invest' && !token) {
+      this.router.navigate(['invest-feature/main']);
+      return false;
     }
-
-    return this.rt;
+    return true;
   }
 }

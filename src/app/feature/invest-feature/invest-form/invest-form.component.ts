@@ -190,7 +190,7 @@ export class InvestFormComponent implements OnInit {
   }
 
   public exit() {
-    this.authService.exit();
+    this.authService.clear();
     this.router.navigateByUrl('invest-feature/main');
   }
 }
