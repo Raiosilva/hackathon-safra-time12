@@ -14,7 +14,6 @@ import { MainRoutingModule } from './invest-feature-routing.module';
 import { InvestFormComponent } from './invest-form/invest-form.component';
 import { MainComponent } from './main/main.component';
 
-
 @NgModule({
   declarations: [
     InvestFormComponent,

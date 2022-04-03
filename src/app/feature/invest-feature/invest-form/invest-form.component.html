@@ -1,230 +1,331 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button aria-label="Example icon-button with menu icon">
-        <img src="logo.jpg" alt="some text" width="60" height="40">
-    </button>
+<mat-toolbar color="primary" style="height: 100px;">
+    <span>
+        <img src="../../../../assets/user-icon.svg" alt="" width="100" height="90">
+    </span>
     <span class="example-spacer"></span>
     <span>
-        <img src="logo.jpg" alt="some text" width="60" height="40">
+        <img src="../../../../assets/logo-safra-branco.svg" alt="" width="100" height="90">
     </span>
 </mat-toolbar>
 
-<div class="d-flex justify-content-center" style="padding-top: 150px; display: flex;">
-    <div class="row">
-        <ng-container *ngIf="stepInitial">
-            <div class="col-md-12">
-                <div class="border">
-                    <p style="font-size: 16px;">
-                        Parabéns Gabriel, temos pré aprovado um valor de empréstimo
-                        de investimento no valor de R$10.000,00
-                    </p>
+<body>
+    <div class="d-flex justify-content-center" style="padding-top: 80px; display: flex;">
+        <div class="row">
+            <ng-container *ngIf="stepInitial">
+                <div class="col-md-12">
+                    <div class="border">
+                        <p style="font-size: 16px;">
+                            Parabéns Gabriel, temos pré aprovado um valor de empréstimo
+                            de investimento no valor de R$10.000,00
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12 justify-content-center pt-2" style="display: flex;">
-                <button mat-button color="primary" type="submit" (click)="setStepSecondary()" style="background-color: #C4C4C4; color: black; border-radius: 4px; border: 0px solid; font-size: 14px;
+                <div class="col-md-12 justify-content-center pt-2" style="display: flex;">
+                    <button mat-button color="primary" type="submit" (click)="setStepSecondary()" style="background-color: #C4C4C4; color: black; border-radius: 4px; border: 0px solid; font-size: 14px;
                     font-weight: 500;
                     font-family: 'Roboto';">
-                    Ver opções
-                </button>
-            </div>
-        </ng-container>
+                        Ver opções
+                    </button>
+                </div>
+            </ng-container>
+        </div>
     </div>
-</div>
 
-<ng-container *ngIf="stepSecondary">
-    <div class="container justify-content-center" style="display: flex;">
-        <div style="background-color: #C4C4C4; color: black; border-radius: 4px; width: 460px;">
-            <div class="row">
-                <div class="col-md-12">
-                    <p style="font-size: 16px; text-align: center; margin-left: 5%; padding-left: 13px;
+    <ng-container *ngIf="stepSecondary">
+        <div class="container justify-content-center" style="display: flex;">
+            <div style="background-color: #C4C4C4; color: black; border-radius: 4px; width: 460px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p style="font-size: 16px; text-align: center; margin-left: 5%; padding-left: 13px;
                     font-size: 17px;
                     font-weight: 500;
                     font-family: 'Roboto';">
-                        Valor disponível para investimento
-                    </p>
-                </div>
-                <p style="font-size: 16px; text-align: center; margin-left: 5%; padding-left: 13px;
+                            Valor disponível para investimento
+                        </p>
+                    </div>
+                    <p style="font-size: 16px; text-align: center; margin-left: 5%; padding-left: 13px;
                 font-size: 17px;
                 font-weight: 500;
                 font-family: 'Roboto';">
-                    R$10.000,00
-                </p>
-            </div>
-            <div class="col-md-12" style="padding-top: 30px; padding-left: 13px;
-            font-size: 17px;
-            font-weight: 500;
-            font-family: 'Roboto';">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Tempo de Contrato:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label>5 meses</label>
-                    </div>
+                        R$10.000,00
+                    </p>
                 </div>
-                <div class="row pt-4">
-                    <div class="col-md-6">
-                        <label>Taxa Performance se Positivo:</label>
+                <div class="col-md-12" style="padding-top: 30px; padding-left: 13px;
+                font-size: 17px;
+                font-weight: 500;
+                font-family: 'Roboto';">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Tempo de Contrato:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>5 meses</label>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label>25% do que exeder o CDI</label>
+                    <div class="row pt-4">
+                        <div class="col-md-6">
+                            <label>Taxa Performance se Positivo:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>25% do que exeder o CDI</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row pt-4">
-                    <div class="col-md-6">
-                        <label>Taxa se Negativo:</label>
+                    <div class="row pt-4">
+                        <div class="col-md-6">
+                            <label>Taxa se Negativo:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Regra Poupança 8,5%</label>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label>Regra Poupança 8,5%</label>
-                    </div>
-                </div>
-                <div class="col-md-12 pt-4 pb-2 justify-content-center" style="display: flex; margin-left: 4%;">
-                    <button mat-button color="primary" type="submit" (click)="setStepThird()" style="border: 0px solid;
+                    <div class="col-md-12 pt-4 pb-2 justify-content-center" style="display: flex;">
+                        <button mat-button color="primary" type="submit" (click)="setStepThird()" style="border: 0px solid;
                     background-color: #121F64; font-size: 14px; color: white;
                     font-weight: 500;
                     font-family: 'Roboto'; ">
-                        Seguinte
+                            Seguinte
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-12" style="display: flex;">
+                    <button mat-button type="submit" (click)="retornPage1()" style="font-size: 14px; color: black;
+                font-weight: 500;
+                font-family: 'Roboto';">
+                        Retornar
                     </button>
                 </div>
             </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
 
-<ng-container *ngIf="stepThird">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 d-flex justify-content-center">
-                <div style="background-color: #C4C4C4; border-radius: 4px; width: 380px; padding: 18px;">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-12" style="text-align: center;">
-                                <p style="font-size: 16px; font-size: 18px;
+    <ng-container *ngIf="stepThird">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div style="background-color: #C4C4C4; border-radius: 4px; width: 380px; padding: 18px;">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center;">
+                                    <p style="font-size: 16px; font-size: 18px;
                                 font-weight: 600;
                                 font-family: 'Roboto';">
-                                    Investimentos pré selecionados
-                                </p>
+                                        Investimentos pré selecionados
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12" style="padding-top: 14px; text-align: center; font-size: 18px;
+                        <div class="col-md-12" style="padding-top: 14px; text-align: center; font-size: 18px;
                     font-weight: 600;
                     font-family: 'Roboto';">
-                        <div class="row">
-                            <div class="col-md-12 pt-4">
-                                <label>VALE3</label>
-                                <button type="button" id="less" (click)="less()"><i class="fa fa-minus-circle"
-                                        aria-hidden="true">-</i></button> &nbsp;
-                                <mat-form-field style="width: 80px; text-align: center !important;">
-                                    <input type="number" matInput type="text" value="" [(ngModel)]="field1"> &nbsp;
-                                </mat-form-field>
-                                <button type="button" id="mais" onclick="more()">+<i class="fa fa-plus-circle"
-                                        aria-hidden="true"></i></button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>VALE3</label>
+                                    <button type="button" id="less" (click)="less1()"
+                                        [disabled]="disabledLess1 || blockvalues"><i class="fa fa-minus-circle"
+                                            aria-hidden="true">-</i></button> &nbsp;
+                                    <mat-form-field
+                                        style="width: 70px; text-align: center !important; height: 60px !important;">
+                                        <input type="number" matInput type="text" value="" [(ngModel)]="field1"
+                                            [disabled]="true"> &nbsp;
+                                    </mat-form-field>
+                                    <button type="button" id="mais" (click)="more1()" [disabled]="blockvalues">+<i
+                                            class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>ITUB4</label>
+                                    <button type="button" id="less" (click)="less2()"
+                                        [disabled]="disabledLess2 || blockvalues"><i class="fa fa-minus-circle"
+                                            aria-hidden="true">-</i></button> &nbsp;
+                                    <mat-form-field
+                                        style="width: 70px; text-align: center !important; height: 60px !important;">
+                                        <input type="number" matInput type="text" value="" [(ngModel)]="field2"
+                                            [disabled]="true"> &nbsp;
+                                    </mat-form-field>
+                                    <button type="button" id="mais" (click)="more2()" [disabled]="blockvalues">+<i
+                                            class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>BBDC4</label>
+                                    <button type="button" id="less" (click)="less3()"
+                                        [disabled]="disabledLess3 || blockvalues"><i class="fa fa-minus-circle"
+                                            aria-hidden="true">-</i></button> &nbsp;
+                                    <mat-form-field
+                                        style="width: 70px; text-align: center !important; height: 60px !important;">
+                                        <input type="number" matInput type="text" value="" [(ngModel)]="field3"
+                                            [disabled]="true"> &nbsp;
+                                    </mat-form-field>
+                                    <button type="button" id="mais" (click)="more3()" [disabled]="blockvalues">+<i
+                                            class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>ABEV3</label>
+                                    <button type="button" id="less" (click)="less4()"
+                                        [disabled]="disabledLess4 || blockvalues"><i class="fa fa-minus-circle"
+                                            aria-hidden="true">-</i></button> &nbsp;
+                                    <mat-form-field
+                                        style="width: 70px; text-align: center !important; height: 60px !important;">
+                                        <input type="number" matInput type="text" value="" [(ngModel)]="field4"
+                                            [disabled]="true"> &nbsp;
+                                    </mat-form-field>
+                                    <button type="button" id="mais" (click)="more4()" [disabled]="blockvalues">+<i
+                                            class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>PETR4</label>
+                                    <button type="button" id="less" (click)="less5()"
+                                        [disabled]="disabledLess5 || blockvalues"><i class="fa fa-minus-circle"
+                                            aria-hidden="true">-</i></button> &nbsp;
+                                    <mat-form-field
+                                        style="width: 70px; text-align: center !important; height: 60px !important;">
+                                        <input type="number" matInput type="text" value="" [(ngModel)]="field5"
+                                            [disabled]="true"> &nbsp;
+                                    </mat-form-field>
+                                    <button type="button" id="mais" (click)="more5()" [disabled]="blockvalues">+<i
+                                            class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                </div>
                             </div>
-                            <div class="col-md-12 pt-4">
-                                <label>ITUB4 - 300 +</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button mat-button>VER MAIS</button>
+                                </div>
                             </div>
-                            <div class="col-md-12 pt-4">
-                                <label>BBDC4 - 0 +</label>
-                            </div>
-                            <div class="col-md-12 pt-4">
-                                <label>ABEV3 - 0 +</label>
-                            </div>
-                            <div class="col-md-12 pt-4">
-                                <label>PETR4 - 100 +</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 pt-4">
-                                <button mat-button>VER MAIS</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12" style="padding-top: 40px;">
-                                <button mat-button color="primary" type="submit" (click)="setFineshStep()" style="border: 0px solid;
+                            <div class="row">
+                                <div class="col-md-12" style="padding-top: 40px;">
+                                    <button mat-button color="primary" type="submit" (click)="setFineshStep()" style="border: 0px solid;
                                 background-color: #121F64; font-size: 14px;
                                 font-weight: 500;
                                 font-family: 'Roboto'; color: white;">
-                                    Finalizar
+                                        Finalizar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="display: flex;">
+                                <button mat-button type="submit" (click)="retornPage2()" style="font-size: 14px; color: black;
+                            font-weight: 500;
+                            font-family: 'Roboto';">
+                                    Retornar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 40px; position: absolute; top: 40%; left: 62%;">
+                        <button mat-button color="primary" type="submit"
+                            style="border: 0px solid; background-color: #121F64; font-size: 14px; font-weight: 500; font-family: 'Roboto'; color: white;">
+                            Total R$ {{field1 + field2 + field3 + field4 + field5}},00
+                            <div *ngIf="(field1 + field2 + field3 + field4 + field5) < 10000">
+
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="row" style="display: contents;">
+                    <div class="col-md-12 d-flex justify-content-center"
+                        style="padding-top: 50px; font-weight: 500; font-size: 16px;">
+                        <label style="background-color: #C4C4C4; border-radius: 4px; padding: 14px;">Entre em contato
+                            com um
+                            de
+                            nossos consultores</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="fineshStep">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div style="background-color: #C4C4C4; border-radius: 4px; width: 380px; padding: 18px;">
+                    <div class="col-md-12" style="width: 300px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="font-size: 16px; text-align: center;">
+                                    Confirme com a sua Senha
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="padding-top: 14px; text-align: center;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form [formGroup]="formPassword">
+                                        <mat-form-field style="width: 100%;">
+                                            <input matInput formControlName="passwordConfirm" type="password"
+                                                placeholder="passwordConfirm" autocomplete="passwordConfirm">
+                                        </mat-form-field>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-center"
+                                        style="padding-top: 40px; margin-left: 19px;">
+                                        <button mat-button color="primary" type="submit" (click)="confirm()"
+                                            [disabled]="formPassword.invalid" style="border: 0px solid;
+                                        background-color: #121F64; font-size: 14px;
+                                        font-weight: 500;
+                                        font-family: 'Roboto'; color: white;">
+                                            Confirmar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="display: flex;">
+                                <button mat-button type="submit" (click)="retornPage3()" style="font-size: 14px; color: black;
+                            font-weight: 500;
+                            font-family: 'Roboto';">
+                                    Retornar
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="" style="padding-top: 40px; position: absolute; top: 40%; left: 62%;">
-                    <button mat-button color="primary" type="submit" (click)="setFineshStep()" style="border: 0px solid;
-                    background-color: #121F64; font-size: 14px;
-                    font-weight: 500;
-                    font-family: 'Roboto'; color: white;">
-                        Finalizar 2
-                    </button>
-                </div>
-            </div>
-            <div class="row" style="display: contents;">
-                <div class="col-md-12 d-flex justify-content-center"
-                    style="padding-top: 50px; font-weight: 500; font-size: 16px;">
-                    <label style="background-color: #C4C4C4; border-radius: 4px; padding: 14px;">Entre em contato com um
-                        de
-                        nossos consultores</label>
-                </div>
             </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
 
-<ng-container *ngIf="fineshStep">
-    <div class="container d-flex justify-content-center">
-        <div class="row">
-            <div style="background-color: #C4C4C4; border-radius: 4px; width: 380px; padding: 18px;">
-                <div class="col-md-12" style="width: 300px;">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p style="font-size: 16px; text-align: center;">
-                                Confirme com a sua Senha
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding-top: 14px; text-align: center;">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                                    <mat-form-field style="width: 100%;">
-                                        <input matInput formControlName="password" type="password"
-                                            placeholder="Password" autocomplete="password">
-                                    </mat-form-field>
-                                </form>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 d-flex justify-content-center"
-                                    style="padding-top: 40px; margin-left: 19px;">
-                                    <button mat-button color="primary" type="submit" style="border: 0px solid;
-                                        background-color: #121F64; font-size: 14px;
-                                        font-weight: 500;
-                                        font-family: 'Roboto'; color: white;">
-                                        Confirmar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</ng-container>
-
-<ng-container *ngIf="stepThird">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-4 align-self-end">
-                <button mat-button color="primary" type="submit" style="float: right; border: 0px solid;
+    <ng-container *ngIf="stepThird">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-4 align-self-end">
+                    <button mat-button color="primary" type="submit" style="float: right; border: 0px solid;
                 background-color: #121F64; font-size: 14px;
                     font-weight: 500;
                     font-family: 'Roboto'; color: white;">
-                    WhatsApp
-                </button>
+                        WhatsApp
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="stepFour">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div style="background-color: #C4C4C4; border-radius: 4px; width: 380px; padding: 18px;">
+                    <div class="col-md-12" style="width: 300px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="font-size: 16px; text-align: center;">
+                                    Transação realizada com sucesso
+                                </p>
+                                <p>
+                                    Confira seu e-mail para visualizar sua nota de corretagem
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="padding-top: 14px; text-align: center;">
+                            <div class="col-md-12" style="display: flex;">
+                                <button mat-button type="submit" (click)="exit()" style="font-size: 14px; color: black;
+                            font-weight: 500;
+                            font-family: 'Roboto';">
+                                    sair
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+
+</body>

@@ -1,4 +1,263 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.2rem;
+    background-color: #00003c;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1023px) {
+
+    body {
+        min-width: 360px;
+        min-height: 700px;
+        font-size: 1.4rem;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        height: 70px;
+        margin: 10% 0;
+    }
+
+    #form-container {
+        width: 100%;
+    }
+
+    #login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .form-input-txt {
+        width: 75%;
+        height: 40px;
+    }
+
+    .form-input-txt {
+        width: 90%;
+        height: 45px;
+        color: #1e2044;
+        padding: 3px 0 0 5px;
+        border: 1px solid #d8d8d8;
+        color: #1e2044;
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px 0;
+    }
+
+    .form-input-txt::placeholder {
+        padding-left: 10px;
+        color: #1e2044;
+        font-size: 1.4rem;
+    }
+
+    .form-input-txt:focus {
+        box-shadow: 1px 1px 10px #fff;
+    }
+
+    // #form-input-btn {
+    //     width: 90%;
+    //     height: 50px;
+    //     font-weight: bold;
+    //     color: #fff;
+    //     background-color: #00003c;
+    //     border-radius: 4px;
+    //     border: 1px solid #d4ad68;
+    // }
+
+    #form-forgot-password {
+        margin: 15px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+#footer-container {
+    position: relative;
+    top: 300px;
+    width: 100%;
+}
+
+#footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-li {
+    margin: 10px 0;
+}
+
+.footer-li a {
+    color: #fff;
+}
+
+#copyright-mobile {
+    position: relative;
+    top: 100px;
+    color: #d4ad68;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+#copyright {
+    display: none;
+    color: #d4ad68;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/*
+-
+-
+
+ 1024px
+
+ -
+ -
+ */
+
+@media screen and (min-width: 1024px) {
+
+    #container {
+        margin: 0 auto;
+        width: 1024px;
+    }
+
+    #logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo {
+        margin: 50px 0;
+    }
+
+    #form-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #login-form {
+        margin: 50px 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        padding: 20px;
+        background-color: #ededed;
+        border-radius: 4px;
+        box-shadow: 1px 1px 7px #fff;
+    }
+
+    .form-input-txt {
+        width: 90%;
+        height: 45px;
+        color: #1e2044;
+        padding: 3px 0 0 5px;
+        border: 1px solid #d8d8d8;
+        color: #1e2044;
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px 0;
+    }
+
+    #form-input-btn {
+        width: 90%;
+        height: 50px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #00003c;
+        border-radius: 4px;
+        border: 1px solid #d4ad68;
+    }
+
+    .form-input-txt::placeholder {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: #1e2044;
+        font-size: 1rem;
+    }
+
+    #form-input-btn:hover {
+        cursor: pointer;
+        background-color: #2a2a5c;
+        border: 1px solid #2a2a5c;
+    }
+
+    #form-forgot-password {
+        margin-top: 10px;
+        text-decoration: none;
+        color: #1e2044;
+    }
+
+    #form-forgot-password:hover {
+        text-decoration: none;
+        color: #2a2a5c;
+    }
+
+    #copyright {
+        font-size: 1.5rem;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 35px;
+    }
+
+    .footer-li a {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    .footer-li a:hover {
+        cursor: pointer;
+        color: #dbbb81;
+    }
+}

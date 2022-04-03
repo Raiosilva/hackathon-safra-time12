@@ -1,0 +1,15 @@
+{
+    "error": {
+        "field_required": "Campo Obrigatório!"
+    },
+    "general": {
+        "login": "Login",
+        "i_forgot_my_password": "Esqueci minha senha"
+    },
+    "footer": {
+        "online_security": "Segurança Online",
+        "help": "Ajuda",
+        "contact": "Contate-nos"
+    },
+    "Copyright": "Copyright Banco Safra, 2022"
+}

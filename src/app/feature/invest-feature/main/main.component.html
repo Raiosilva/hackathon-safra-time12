@@ -1,43 +1,43 @@
-<div class="d-flex justify-content-center align-items-center" style="padding-top: 150px; display: flex;">
-    LOGO Safra Link
-</div>
-
-<div class="d-flex justify-content-center align-items-center pt-3">
-    <div class="row">
-        <div class="col-md-12">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <mat-card class="login-card">
-                    <div class="row">
-                        <mat-card-content *ngIf="!loading">
-                            <div class="col-md-12">
-                                <mat-form-field style="width: 100%;">
-                                    <input matInput formControlName="userId" type="userId" placeholder="User-ID"
-                                        autocomplete="userId" readonly="false">
-                                </mat-form-field>
-                            </div>
-                            <div class="col-md-12">
-                                <mat-form-field style="width: 100%;">
-                                    <input matInput formControlName="password" type="password" placeholder="Password"
-                                        autocomplete="password">
-                                </mat-form-field>
-                            </div>
-                        </mat-card-content>
-                        <div class="col-md-12 d-flex justify-content-center align-items-center">
-                            <button mat-button color="primary" type="submit" [disabled]="!loginForm.valid || loading"
-                                (click)="loginGoogle()">
-                                <mat-icon>check</mat-icon>Login
-                            </button>
-                        </div>
-                    </div>
-                    {{!loginForm.valid || loading}}
-                    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-
-                </mat-card>
+<body>
+    <div id="container">
+        <div id="logo-container">
+            <img id="logo" src="../../../../assets/logo-safra-branco.svg" alt="Logo Safra" />
+        </div>
+        <div id="form-container">
+            <form id="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <input class="form-input-txt" type="text" placeholder="Agência" formControlName="agencia" required
+                    minlength="5" name="agencia" />
+                <div *ngIf="loginForm.controls.agencia.touched
+                    && loginForm.controls.agencia.errors?.required
+                    || loginForm.controls.agencia.errors?.errorAgencia" class="alert-error">
+                    {{label.error.field_required}}
+                </div>
+                <input class="form-input-txt" type="text" placeholder="Conta" formControlName="conta" required
+                    minlength="8" />
+                <div *ngIf="loginForm.controls.conta.touched
+                    && loginForm.controls.conta.errors?.required
+                    || loginForm.controls.conta.errors?.errorConta" class="alert-error">
+                    {{label.error.field_required}}
+                </div>
+                <input class="form-input-txt" #pwConfirmModel type="password" placeholder="Senha"
+                    formControlName="password" required minlength="8" />
+                <div *ngIf="loginForm.controls.password.touched
+                    && loginForm.controls.password.errors?.required
+                    || loginForm.controls.password.errors?.errorPassword" class="alert-error">
+                    {{label.error.field_required}}
+                </div>
+                <button id="form-input-btn" type="submit" value="Login">{{label.general.login}}</button>
+                <a id="form-forgot-password" href="">{{label.general.i_forgot_my_password}}</a>
             </form>
-
+        </div>
+        <div id="footer-container">
+            <ul id="footer-list">
+                <li class="footer-li"><a href="">{{label.footer.seguranca_online}}</a></li>
+                <li class="footer-li"><a href="">{{label.footer.help}}</a></li>
+                <li class="footer-li"><a href="">{{label.footer.contact}}</a></li>
+            </ul>
+            <p id="copyright-mobile">&copy;{{label.Copyright}}</p>
+            <p id="copyright">&copy;{{label.Copyright}}</p>
         </div>
     </div>
-</div>
-<div class="col-md-12 d-flex justify-content-center align-items-center pt-3">
-    <p>Please read our Terms and Conditions</p>
-</div>
+</body>
