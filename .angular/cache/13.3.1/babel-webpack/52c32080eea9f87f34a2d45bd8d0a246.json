@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Labels {\n  static getLabels() {\n    return this.labelsPtBr;\n  }\n\n}\nLabels.labelsPtBr = require('./labels_pt-br.json');","map":null,"metadata":{},"sourceType":"module"}
