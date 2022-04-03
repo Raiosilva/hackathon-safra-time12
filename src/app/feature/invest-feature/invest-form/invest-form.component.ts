@@ -16,23 +16,17 @@ export class InvestFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
-
-
   returnStepOne(stepTwo: any) {
     this.stepInitial = stepTwo;
     this.stepTwo = false;
   }
 
   returnStepTwo(stepTwo: any) {
-    console.log(stepTwo);
-
     this.stepTwo = true;
     this.stepThird = stepTwo;
   }
 
   returnStepThird(stepTwo: any) {
-    console.log(stepTwo);
-
     this.stepFour = stepTwo;
     this.stepThird = true;
   }
@@ -53,8 +47,6 @@ export class InvestFormComponent implements OnInit {
   }
 
   nextStepFive(stepFive: boolean) {
-    console.log(stepFive);
-
     this.stepFive = stepFive;
     this.stepFour = false;
   }

@@ -14,23 +14,17 @@
     <div id="main-section-container">
 
         <div id="aviso">
-            <p id="prompt-title">Digite sua senha para autenticar a transção:</p>
+            <p id="prompt-title" style="font-size: 16px;">Digite sua senha para autenticar a transção:</p>
             <form id="password-confirmation-form" [formGroup]="formPassword" (ngSubmit)="onSubmitConfirm()">
                 <input id="password-field" type="password" maxlength="6" matInput formControlName="passwordConfirm"
                     type="password" placeholder="Confirme a sua Senha" />
             </form>
         </div>
         <button id="check-options-btn" type="button" (click)="confirm()">Finalizar</button>
+        <button id="check-options-btn" type="button" (click)="retornPage1()">Retornar</button>
         <div id="whatsapp-logo-container">
-            <p>Precisa de consultoria?</p>
+            <p style="font-size: 16px;">Precisa de consultoria?</p>
             <a href=""><img id="whatsapp-logo" src="../../../../assets/whatsapp-logo.svg" alt="Logo WhatsApp"></a>
-        </div>
-        <div class="col-md-12" style="display: flex;">
-            <button mat-button type="submit" (click)="retornPage1()" style="font-size: 14px; color: black;
-                    font-weight: 500;
-                    font-family: 'Roboto';">
-                Retornar
-            </button>
         </div>
     </div>
 </div>

@@ -27,14 +27,7 @@ export class MainComponent implements OnInit {
     private authService: AuthService
   ) { }
 
-  ngOnInit(): void {
-    this.loginForm.valueChanges.subscribe(form => {
-      console.log('form: ', form);
-      if (form && form.agencia) {
-
-      }
-    })
-  }
+  ngOnInit(): void { }
 
   public validFields(value: any) {
     if (value && value.agencia == '') {
@@ -48,14 +41,11 @@ export class MainComponent implements OnInit {
     if (value && value.password == '') {
       this.loginForm.get('password')?.setErrors({ errorPassword: true });
     }
-    console.log('loginForm: ', this.loginForm);
-
   }
 
-  onSubmit() {
+  public onSubmit() {
     this.loading = true;
     const value = this.loginForm.getRawValue();
-    console.log('value: ', value);
     this.validFields(value);
     if (value &&
       value.agencia

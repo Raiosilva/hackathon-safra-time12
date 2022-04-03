@@ -12,8 +12,7 @@ export class IndexComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   public setStepSecondary() {
     this.stepSecondary = true;
