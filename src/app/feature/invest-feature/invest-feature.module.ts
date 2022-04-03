@@ -10,6 +10,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FiveScreenComponent } from '../components/five-screen/five-screen.component';
+import { FourScreenComponent } from '../components/four-screen/four-screen.component';
+import { IndexComponent } from '../components/index/index.component';
+import { SecondaryScreenComponent } from '../components/secondary-screen/secondary-screen.component';
+import { ThirdScreenComponent } from '../components/third-screen/third-screen.component';
 import { MainRoutingModule } from './invest-feature-routing.module';
 import { InvestFormComponent } from './invest-form/invest-form.component';
 import { MainComponent } from './main/main.component';
@@ -17,7 +22,12 @@ import { MainComponent } from './main/main.component';
 @NgModule({
   declarations: [
     InvestFormComponent,
-    MainComponent
+    MainComponent,
+    IndexComponent,
+    SecondaryScreenComponent,
+    ThirdScreenComponent,
+    FourScreenComponent,
+    FiveScreenComponent
   ],
   imports: [
     ReactiveFormsModule,

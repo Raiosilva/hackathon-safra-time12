@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    font-size: 62.5%;
+}
+
+body {
+    color: #1e2044;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1023px) {
+
+    body {
+        min-width: 360px;
+        min-height: 700px;
+        font-size: 1.4rem;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    #shared-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background-color: #00003c;
+    }
+
+    #user-picture-container {
+        margin-left: -75px;
+        float: left;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #user-pic {
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        height: 50px;
+    }
+
+    #greet-message {
+        color: #fff
+    }
+
+    #greet-message a {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    #logo-container {
+        display: flex;
+        align-items: center;
+        margin-right: -75px;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    #main-section-container {
+        width: 100%;
+        margin: 50% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #aviso {
+        margin: 0 auto;
+        width: 75%;
+        height: 75%;
+        background-color: #d8d8d8;
+        border: 1px solid #d4ad68;
+        border-radius: 4px;
+        padding: 15px;
+    }
+
+    #aviso a {
+        color: #fff;
+    }
+
+    #prompt-title {
+        text-align: center;
+    }
+
+    #password-confirmation-form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+    }
+
+    #password-field {
+        text-align: center;
+        width: 90%;
+        height: 40px;
+        color: #1e2044;
+        padding: 3px 0 0 5px;
+        border: 1px solid #d8d8d8;
+        color: #1e2044;
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px 0;
+    }
+
+    #password-field:focus {
+        box-shadow: 1px 1px 10px #fff;
+    }
+
+    #check-options-btn {
+        width: 75%;
+        height: 45px;
+        border: 1px solid #00003c;
+        font-weight: bold;
+        color: #fff;
+        background-color: #00003c;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+    #whatsapp-logo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 10% 0 0 0;
+    }
+
+    #whatsapp-logo {
+        margin-top: 5px;
+        width: 60px;
+    }
+}
+
+/*
+-
+-
+
+ 1024px
+
+ -
+ -
+ */
+
+@media screen and (min-width: 1024px) {
+
+    #container {
+        margin: 0 auto;
+        width: 1024px;
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    body {
+        background-color: #d8d8d8;
+        min-width: 360px;
+        min-height: 700px;
+        font-size: 1.4rem;
+    }
+
+    #shared-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background-color: #00003c;
+    }
+
+    #user-picture-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #user-pic {
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        height: 50px;
+    }
+
+    #greet-message {
+        color: #fff
+    }
+
+    #greet-message a {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    #logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    #main-section-container {
+        width: 100%;
+        margin: 30vh 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #aviso {
+        margin: 0 auto;
+        width: 75%;
+        height: 75%;
+        background-color: #d8d8d8;
+        border: 1px solid #d4ad68;
+        border-radius: 4px;
+        padding: 30px;
+    }
+
+    #aviso a {
+        color: #1e2044;
+        font-weight: bold;
+    }
+
+    #prompt-title {
+        text-align: center;
+    }
+
+    #password-confirmation-form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+    }
+
+    #password-field {
+        text-align: center;
+        width: 90%;
+        height: 45px;
+        color: #1e2044;
+        padding: 3px 0 0 5px;
+        border: 1px solid #d8d8d8;
+        color: #1e2044;
+        background-color: #fff;
+        border-radius: 4px;
+        margin: 5px 0;
+    }
+
+    #password-field:focus {
+        box-shadow: 1px 1px 10px #fff;
+    }
+
+    #check-options-btn {
+        width: 75%;
+        height: 45px;
+        border: 1px solid #00003c;
+        font-weight: bold;
+        color: #fff;
+        background-color: #00003c;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+    #check-options-btn:hover {
+        cursor: pointer;
+        background-color: #2a2a5c;
+        border: 1px solid #2a2a5c;
+    }
+
+    #whatsapp-logo-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 250px 0 5px 0;
+    }
+
+    #whatsapp-logo {
+        margin-top: 5px;
+        width: 60px;
+    }
+
+    #whatsapp-logo:hover {
+        transform: scale(1.2);
+        filter: saturate(4);
+    }
+}
